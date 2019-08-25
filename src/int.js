@@ -17,7 +17,7 @@ function Down() {
 function Up() {
 	document.getElementById('pre-body').className = "";
 	document.getElementById('mainT').className = "pre-body-title";
-}
+
 **/
 function goUpB() {
 	if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
