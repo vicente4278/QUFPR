@@ -119,26 +119,22 @@ body {
 	transform: translate(-50%, -50%);
 }
 .appcard {
-	width: 150px;
-	height: 75px;
+	width: 100px;
+	height: 80px;
 	display: -webkit-inline-box;
 	vertical-align: middle;
 	text-align: -webkit-center;
-	padding: 15px;
-	padding-top: 75px;
+	padding: 30px;
+	padding-top: 50px;
 	margin: 20px;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 	transition-duration: 0.3s;
 	color: white;
-	text-shadow: 0px 4px 7px black;
+	border-radius: 8px;
 }
 .appcard:hover {
-	font-size: 20pt;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-	width: 200px;
 	margin: 20px;
-	margin-left: 10px;
-	text-shadow: 0px 6px 10px black;
 }
 a {
 	text-decoration: none;
@@ -153,6 +149,43 @@ a.normal {
 }
 a.normal:visited {
 	color: #333;
+}
+
+#go2Top {
+	position: fixed;
+	right: -5px;
+	bottom: 50px;
+	transition-duration: 0.5s;
+	padding: 10px;
+	outline: none;
+	padding-right: 30px;
+	font-family: "RobotoDraft","Roboto",sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: #333;
+	cursor: pointer;
+}
+#go2Top.TopH {
+	right: -300px;
+}
+
+input[type="button"] {
+	background-color: #FFF;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E0E0E0;
+	padding: 3px;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+	font-family: "RobotoDraft","Roboto",sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 15px;
+	text-rendering: optimizeLegibility;
+	color: #212121;
+	border-radius: 4px;
+
+}
+input[type="button"]:active {
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
 }
 
 @font-face {
