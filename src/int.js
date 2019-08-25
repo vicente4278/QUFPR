@@ -31,3 +31,7 @@ function goUpB() {
 		document.getElementById('mainT').className = "pre-body-titleScroll";
 	}
 }
+
+function load() {
+	setInterval('goUpB();',100)
+}
