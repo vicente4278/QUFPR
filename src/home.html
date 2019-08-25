@@ -1,12 +1,56 @@
-<!doctype= html> <!-- Página criada por Vicente Parmigiani em 25/08/2019 às 18h-->
-<html lang="pt">
+<!doctype= html> <!-- P�gina criada por Vicente Parmigiani em 25/08/2019 �s 19h-->
+<html>
 	<head>
-		<title>Química UFPR</title>
-		<link rel="icon" type="image/png" href="?" />
+		<title>Chemistry Pages</title>
+		<link rel="icon" type="image/png" href="icon.png" />
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta charset="ISO-8859-1"> <!-- Para páginas em Português, Brasil. -->
-		<script src="int.ufpr"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<script src="int.js"></script>
 	</head>
-	<body>
+	<body onscroll="Down()">
+		<div id="darkBackground" onclick="SANDmenu(1)" class="hide"></div>
+		<div id="header">
+			<p style="margin-top:-15px;">
+				<i class="material-icons" md-24 md-light style="vertical-align: middle;padding: 10px;">home</i>
+				<text style="margin-top: 1px;vertical-align: middle;">Home</text>
+			</p>
+		</div>
+		<img style="-webkit-filter:brightness(70%)" class="background-video" src="media\background.jpg">
+		<div id="pre-body" onmouseover="Up()">
+			<text id="mainT" class="pre-body-title">Chemistry Pages</text>
+			<br>
+			<text class="pre-body-subtitle">Made by Vicente Parmigiani</text>
+		</div>
+		<div id="body">
+			<text class="chapT">Contents</text>
+			<p>Here is a list of the pages that have been developed to this moment.</p>
+			<div id="applist">
+				<a href="Bio.html"><div class="appcard" style="background-color:#4CAF50">Biologia</div></a>
+				<a href="English.html"><div class="appcard" style="background-color:#FF5722">Ingl�s</div></a>
+				<a href="Esp.html"><div class="appcard" style="background-color:#FFEB3B">Espanhol</div></a>
+				<a href="Fil.html"><div class="appcard" style="background-color:#795548">Filosofia</div></a>
+				<a href="Phisics.html"><div class="appcard" style="background-color:#009688">F�sica</div></a>
+				<a href="Geo.html"><div class="appcard" style="background-color:#2196F3">Geografia</div></a>
+				<a href="Art.html"><div class="appcard" style="background-color:#9C27B0">Arte</div></a>
+				<a href="Lit.html"><div class="appcard" style="background-color:#E91E63">Literatura</div></a>
+				<a href="Math.html"><div class="appcard" style="background-color:#FFC107">Matem�tica</div></a>
+				<a href="TXT.html"><div class="appcard" style="background-color:#3F51B5">Texto</div></a>
+				<a href="Quimic.html"><div class="appcard" style="background-color:#8BC34A">Qu�mica</div></a>
+				<a href="Sociologia.html"><div class="appcard" style="background-color:#9E9E9E">Sociologia</div></a>
+			</div>
+			<br><br>
+			<hr style="width: 90%">
+			<br><br>
+			<text class="chapT">Links</text>
+			<p>Useful sites for you.</p>
+			<ul>
+				<li><a class="normal" href="http://www.saojoseerechim.com.br">S�o Jos� Erechim</a></li>
+				<li><a class="normal" href="https://app.mystudylife.com/dashboard">My study Life</a></li>
+				<li><a class="normal" href="https://www.sprweb.com.br/">Super Pro Web</a></li>
+				<li><a class="normal" href="http://portaleducacional.franciscanasmma.com.br">Portal Educacional<a></li>
+			</ul>
+			<a class="normal" href="#pre-body" onclick="scrollToTop();return false">Voltar para o topo ^</a>
+		</div>
 	</body>
 </html>
