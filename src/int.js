@@ -28,7 +28,7 @@ function goUpB() {
 		document.getElementById('mainT').className = "pre-body-title";
 		document.getElementById('subT').className = "pre-body-subtitle";
 	}
-	if (mode == 2 || document.body.scrollTop != 0 || document.documentElement.scrollTop != 0){
+	if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0){
 		document.getElementById("go2Top").className = " ";
 		document.getElementById('pre-body').className = "Scrolled";
 		document.getElementById('mainT').className = "pre-body-titleScroll";
