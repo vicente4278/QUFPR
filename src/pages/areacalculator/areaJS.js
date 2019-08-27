@@ -21,6 +21,15 @@ function solve() {
 	var temperature = temperature.split("\n");
 	var pressure = pressure.split("\n");
 
+	for (var i = 0; i < time.length; i++) {
+		time[i] = Number(time[i]);
+		volume[i] = Number(volume[i]);
+		current[i] = Number(current[i]);
+		height[i] = Number(height[i]);
+		temperature[i] = Number(temperature[i]);
+		pressure[i] = Number(pressure[i]);
+		wvp = Number(wvp);
+	}
 
 
 	var tcons = false;
