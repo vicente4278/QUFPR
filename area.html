@@ -1,0 +1,102 @@
+<!-- P�gina criada por Vicente Parmigiani em 26/08/2019 �s 17h-->
+<html lang="pt">
+	<head>
+		<title>Avogadro's Constant Calculator</title>
+		<link rel="icon" type="image/png" href="icon.png" />
+		<link rel="stylesheet" type="text/css" href="areaS.css">
+		<script src="areaJS.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<p style="margin-top:-15px;">
+				<i class="material-icons" md-24 md-dark style="vertical-align: middle;padding: 10px;">insert_chart</i>
+				<text style="margin-top: 1px;vertical-align: middle;">Physicochemical Class</text>
+				<i class="material-icons" md-24 md-dark style="vertical-align: middle;padding: 10px;">keyboard_arrow_right</i>
+				<text style="margin-top: 1px;vertical-align: middle;">Avogadro's Constant</text>
+			</p>
+		</header>
+		<div id="body">
+			<text class="chapT">Avogrado's Constant Calculator</text>
+			<p>Based on the second practice from the physicochemical class.</p>
+			<div id="input">
+				<table style="width:100%; padding-right:100px" border="1">
+					<tr>
+						<th>time/
+							<select id="time">
+							  <option value="s">s</option>
+							  <option value="m">min</option>
+							  <option value="h">h</option>
+							</select>
+						</th>
+						<th>volume/
+							<select id="volume">
+							  <option value="ml">mL</option>
+							  <option value="l">L</option>
+							  <option value="m3">m³</option>
+							</select>
+						</th>
+						<th>current/
+							<select id="current">
+							  <option value="mA">mA</option>
+							  <option value="A">A</option>
+							</select>
+						</th>
+						<th>height/
+							<select id="height">
+							  <option value="mm">mm</option>
+							  <option value="cm">cm</option>
+								<option value="m">m</option>
+							</select>
+						</th>
+						<th>temperature/
+							<select id="temperature">
+							  <option value="c">ºC</option>
+							  <option value="f">ºF</option>
+								<option value="k">K</option>
+							</select>
+						</th>
+						<th>pressure(amb)/
+							<select id="pressure">
+							  <option value="atm">atm</option>
+								<option value="bar">bar</option>
+								<option value="mmhg">mmHg</option>
+								<option value="pa">Pa</option>
+							</select>
+						</th>
+						<th>
+							Options
+						</th>
+					</tr>
+					<tr class="textareatable">
+						<td><textarea id="ta1" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(1)">Clear</button></td>
+						<td><textarea id="ta2" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(2)">Clear</button></td>
+						<td><textarea id="ta3" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(3)">Clear</button></td>
+						<td><textarea id="ta4" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(4)">Clear</button></td>
+						<td><textarea id="ta5" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(5)">Clear</button></td>
+						<td><textarea id="ta6" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(6)">Clear</button></td>
+						<td><p>Water Vapor Pressure (Pa)</p><input id="wvp" type="number"></input><button onclick="solve()">Calculate</button></td>
+					</tr>
+				</table>
+			</div>
+			<br/>
+			<br/>
+			<table style="width:100%; padding-right:100px; margin-bottom: 100px" border="1">
+				<tr>
+					<th>Time</th>
+					<th>Minimum</th>
+					<th>Maximum</th>
+					<th>Avogadro's Number</th>
+					<th>Direct</th>
+				</tr>
+				<tr>
+					<td id="timeR"></td>
+					<td id="minR"></td>
+					<td id="maxR"></td>
+					<td id="avogR"></td>
+					<td id="directR"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
