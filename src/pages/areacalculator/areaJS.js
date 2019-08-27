@@ -217,8 +217,6 @@ function solve() {
 		}
 	}
 
-
-	alert(storeAreas[1]);
 	var areaUnderGraph = 0;
 
 	for (var i = 1; i < time.length; i++) {
@@ -227,4 +225,10 @@ function solve() {
 
 	document.getElementById('areaUnderGraph').innerHTML = areaUnderGraph+"<br/>";
 
+}
+
+function clear(number) {
+		//var id = 'ta'+number;
+		alert(number);
+		//document.getElementById(id).value = "";
 }
