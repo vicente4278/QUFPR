@@ -191,4 +191,40 @@ function solve() {
 	}
 	document.getElementById('timeR').innerHTML = timePrint;
 
+	/*
+		Area Under Graph
+	*/
+
+	var graphBase = document.getElementById('graphBase').value;
+	graphBase = Number(graphBase);
+	var storeAreas = [];
+
+	for (var i = 0; i < time.length; i++) {
+		if (graphBase == 1) {
+			storeAreas[i] = volume[i];
+		}
+		if (graphBase == 2) {
+			storeAreas[i] = pressure[i];
+		}
+		if (graphBase == 3) {
+			storeAreas[i] = height[i];
+		}
+		if (graphBase == 4) {
+			storeAreas[i] = current[i];
+		}
+		if (graphBase == 5) {
+			storeAreas[i] = temperature[i];
+		}
+	}
+
+
+	alert(storeAreas[1]);
+	var areaUnderGraph = 0;
+
+	for (var i = 1; i < time.length; i++) {
+		areaUnderGraph = areaUnderGraph+(((storeAreas[i]+storeAreas[i-1])*(time[i]-time[i-1]))/2);
+	}
+
+	document.getElementById('areaUnderGraph').innerHTML = areaUnderGraph+"<br/>";
+
 }

@@ -75,7 +75,21 @@
 						<td><textarea id="ta4" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(4)">Clear</button></td>
 						<td><textarea id="ta5" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(5)">Clear</button></td>
 						<td><textarea id="ta6" class="textarea" rows="15" cols="8"></textarea><br/><button onclick="clear(6)">Clear</button></td>
-						<td><p>Water Vapor Pressure (Pa)</p><input id="wvp" type="number"></input><button onclick="solve()">Calculate</button></td>
+						<td>
+							<p>Water Vapor Pressure (Pa)</p>
+							<input id="wvp" type="number"></input>
+							<br/>
+							<p>Area Under Graph</p>
+							<select id="graphBase">
+								<option value="1">Volume</option>
+								<option value="2">Pressure</option>
+								<option value="3">Height</option>
+								<option value="4">Current</option>
+								<option value="5">Temperature</option>
+							</select>
+							<br/>
+							<button onclick="solve()">Calculate</button>
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -95,6 +109,12 @@
 					<td id="maxR"></td>
 					<td id="avogR"></td>
 					<td id="directR"></td>
+				</tr>
+				<tr>
+					<th>Area Under Graph</th>
+				<tr>
+				<tr>
+					<td id=areaUnderGraph></td>
 				</tr>
 			</table>
 		</div>
