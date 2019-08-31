@@ -1,0 +1,141 @@
+dt {
+	border-left: 2px solid transparent;
+	color: #333;
+	font-weight: 700;
+	margin-top: 0px;
+	padding: 15px 0 15px 22px;
+	cursor: pointer;
+	box-sizing: border-box;
+	line-height: 1em;
+	font-size: 13px;
+	font-family: "RobotoDraft","Roboto",sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	z-index: 100;
+	width: 100%;
+	height: 32px;
+	padding: 16px;
+	background-color: #d32f2f;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	color: white;
+	float: left;
+	font-size: 18px;
+	vertical-align: center;
+	line-height: 64px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	font-family: "RobotoDraft","Roboto",sans-serif;
+	text-rendering: optimizeLegibility;
+	position: fixed;
+	display: block;
+}
+#body {
+	font-family: "RobotoDraft","Roboto",sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+	padding-top: 150px;
+	padding-left: 100px;
+	color: #212121;
+}
+.chapT {
+	color: #546e7a;
+	font-size: 34px;
+	font-weight: 400px;
+	line-height: 40px;
+	box-sizing: border-box;
+	-webkit-margin-before: 0.83em;
+	margin-bottom: 100px;
+}
+
+table {
+	border-width: 0px;
+	border-spacing: 2px;
+}
+
+th, td {
+	padding: 15px;
+	text-align: center;
+	border-spacing: 0px;
+	border-width: 0px;
+	background-color: #d32f2f;
+	transition-duration: 0.3s;
+	color: white;
+}
+
+.null {
+	opacity: 0;
+}
+
+tr {
+	border-spacing: 0px;
+}
+
+.visibleCell {
+	opacity: 100;
+}
+
+.hiddenCell {
+	opacity: 80;
+	background-color: darkgray;
+	color: darkgray;
+}
+button {
+	background-color: white;
+	border-radius: 4px;
+	border-color: gray;
+	border-width: 1px;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+	margin-top: 10px;
+	transition-duration: 0.1s;
+	outline: none;
+}
+
+button:active {
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
