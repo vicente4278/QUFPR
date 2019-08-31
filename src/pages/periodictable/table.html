@@ -1,7 +1,8 @@
 <!-- Pï¿½gina criada por Vicente Parmigiani em 26/08/2019 ï¿½s 17h-->
 <html lang="pt">
 	<head>
-		<title>Periodic Table</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+		<title>Tabela Periódica</title>
 		<link rel="icon" type="image/png" href="icon.png" />
 		<link rel="stylesheet" type="text/css" href="tableS.css">
 		<script src="tableJS.js"></script>
@@ -11,18 +12,25 @@
 		<header>
 			<p style="margin-top:-15px;">
 				<i class="material-icons" md-24 md-light style="vertical-align: middle;padding: 10px;">flip_to_front</i>
-				<text style="margin-top: 1px;vertical-align: middle;">Inorganic Chemistry</text>
+				<text style="margin-top: 1px;vertical-align: middle;">Química Inorgânica</text>
 				<i class="material-icons" md-24 md-light style="vertical-align: middle;padding: 10px;">keyboard_arrow_right</i>
-				<text style="margin-top: 1px;vertical-align: middle;">Periodic Table</text>
+				<text style="margin-top: 1px;vertical-align: middle;">Tabela Periódica</text>
 			</p>
 		</header>
 		<div id="body">
-			<text class="chapT">Periodic Table</text>
-			<p>Click on the elements to show or hide them.</p>
+			<text class="chapT">Tabela Periódica</text>
+			<p>Clique para os exibir ou ocultaros elementos.</p>
 			<div id="input">
-				<table style="width:100%; padding-right:100px" border="1">
+				<table>
 					<tr>
-						<td onclick="toggleCell(this)">H</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">1</text><br/>
+								<text class="symbol">H</text><br/>
+								<text class="elementName">Hidrogênio</text><br/>
+								<div class="atomicMass">1.008</div>
+							</div>
+						</td>
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
@@ -39,11 +47,32 @@
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
-						<td onclick="toggleCell(this)">He</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">2</text><br/>
+								<text class="symbol">He</text><br/>
+								<text class="elementName">Hélio</text><br/>
+								<div class="atomicMass">4.0026</div>
+							</div>
+						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">Li</td>
-						<td onclick="toggleCell(this)">Be</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">3</text><br/>
+								<text class="symbol">Li</text><br/>
+								<text class="elementName">Lítio</text><br/>
+								<div class="atomicMass">6.94</div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">4</text><br/>
+								<text class="symbol">Be</text><br/>
+								<text class="elementName">Berílio</text><br/>
+								<div class="atomicMass">9.0122</div>
+							</div>
+						</td>
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
@@ -54,16 +83,72 @@
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
-						<td onclick="toggleCell(this)">B</td>
-						<td onclick="toggleCell(this)">C</td>
-						<td onclick="toggleCell(this)">N</td>
-						<td onclick="toggleCell(this)">O</td>
-						<td onclick="toggleCell(this)">F</td>
-						<td onclick="toggleCell(this)">Ne</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">5</text><br/>
+								<text class="symbol">B</text><br/>
+								<text class="elementName">Boro</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">6</text><br/>
+								<text class="symbol">C</text><br/>
+								<text class="elementName">Carbono</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">7</text><br/>
+								<text class="symbol">N</text><br/>
+								<text class="elementName">Nitrogênio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">8</text><br/>
+								<text class="symbol">O</text><br/>
+								<text class="elementName">Oxigênio</text><br/>
+								<div class="atomicMass">15.999</div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">9</text><br/>
+								<text class="symbol">F</text><br/>
+								<text class="elementName">Flúor</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">10</text><br/>
+								<text class="symbol">Ne</text><br/>
+								<text class="elementName">Neônio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">Na</td>
-						<td onclick="toggleCell(this)">Mg</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">11</text><br/>
+								<text class="symbol">Na</text><br/>
+								<text class="elementName">Sódio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber">12</text><br/>
+								<text class="symbol">Mg</text><br/>
+								<text class="elementName">Magnésio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
@@ -160,6 +245,16 @@
 						<td onclick="toggleCell(this)">Lv</td>
 						<td onclick="toggleCell(this)">Ts</td>
 						<td onclick="toggleCell(this)">Og</td>
+					</tr>
+					<tr>
+						<td onclick="toggleCell(this)">
+							<div class="spacer">
+								<text class="zNumber"></text><br/>
+								<text class="symbol"></text><br/>
+								<text class="elementName"></text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
 					</tr>
 				</table>
 			</div>
