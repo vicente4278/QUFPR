@@ -27,7 +27,7 @@ header {
 	font-size: 20px;
 	text-rendering: optimizeLegibility;
 	padding-top: 100px;
-	padding-left: 100px;
+	padding-left: 70px;
 	color: #212121;
 }
 .chapT {
@@ -91,18 +91,18 @@ button:active {
 }
 
 .zNumber {
-	font-size: 12px;
+	font-size: 8px;
 	text-align: left;
 }
 
 .elementName {
-	font-size: 12px;
+	font-size: 10px;
 	text-align: right;
 	font-weight: bold;
 }
 
 .symbol {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -110,12 +110,12 @@ button:active {
 
 .atomicMass {
 	font-size: 10px;
-	padding-top: 5px;
+	padding-top: 2px;
 }
 
 .spacer {
-	width: 60px;
-	height: 75px;
+	width: 50px;
+	height: 60px;
 	text-align: center;
 }
 
