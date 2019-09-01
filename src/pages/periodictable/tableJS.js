@@ -55,7 +55,7 @@ function checkAnswer() {
 	} else {
 		var elementNumber = "nullCell";
 	}
-	
+
 	if (simbols09[elementNumber] == answer && answer != "" && elementNumber != "nullCell") {
 		document.getElementById(selectedCell).className = "visibleCell";
 		selectedCell = "nullCell";
