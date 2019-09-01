@@ -19,6 +19,7 @@ function toggleCell(element) {
 function startGame() {
 	document.getElementById('game1').className = "input";
 	document.getElementById('game2').className = "input";
+	document.getElementById('tableImage').style.filter = "blur(5px)";
 
 	inGame = true;
 	window.scroll(0,0);
@@ -83,6 +84,7 @@ function summary() {
 		}
 		var interval = setInterval(animation2, 30);
 		var stage = 0;
+		document.getElementById('tableImage').style.filter = "blur(0px)";
 
 		function animation2() {
 			if (stage == 118) {
