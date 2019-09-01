@@ -39,38 +39,43 @@ header {
 	-webkit-margin-before: 0.83em;
 	margin-bottom: 100px;
 }
-
 table {
 	border-width: 0px;
 	border-spacing: 2px;
 }
-
 th, td {
 	padding: 8px;
 	text-align: center;
 	border-spacing: 0px;
 	border-width: 0px;
+	border-radius: 2px;
 	background-color: #d32f2f;
 	transition-duration: 0.3s;
 	color: white;
 }
-
 .null {
 	opacity: 0;
+	visibility: hidden;
 }
-
 tr {
 	border-spacing: 0px;
 }
-
 .visibleCell {
 	opacity: 100;
+	background-color: #2e7d32;
 }
-
+.wrongCell {
+	opacity: 100;
+}
 .hiddenCell {
 	opacity: 80;
 	background-color: darkgray;
 	color: darkgray;
+}
+.selectedCell {
+	opacity: 80;
+	background-color: orange;
+	color: orange;
 }
 button {
 	background-color: white;
@@ -85,40 +90,52 @@ button {
 	transition-duration: 0.1s;
 	outline: none;
 }
-
 button:active {
 	box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
-
 .zNumber {
 	font-size: 8px;
 	text-align: left;
 }
-
 .elementName {
 	font-size: 10px;
 	text-align: right;
 	font-weight: bold;
 }
-
 .symbol {
 	font-size: 20px;
 	font-weight: bold;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-
 .atomicMass {
 	font-size: 10px;
 	padding-top: 2px;
 }
-
 .spacer {
 	width: 50px;
 	height: 60px;
 	text-align: center;
 }
-
+input, textarea {
+  background: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 5px 5px 2px;
+  width: 40px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid lightgray;
+	outline: 0;
+	transition-duration: 0.25s;
+	text-align: center;
+}
+input:focus, textarea:focus {
+	border-bottom: 1px solid white;
+}
+.input {
+	border-radius: 4px;
+}
 
 @font-face {
   font-family: 'Material Icons';
@@ -143,6 +160,8 @@ button:active {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+
+
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;

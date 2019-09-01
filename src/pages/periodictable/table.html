@@ -18,12 +18,10 @@
 			</p>
 		</header>
 		<div id="body">
-			<text class="chapT">Tabela Periódica</text>
-			<p>Clique para os exibir ou ocultaros elementos.</p>
 			<div id="input">
 				<table>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el1">
 							<div class="spacer">
 								<text class="zNumber">1</text><br/>
 								<text class="symbol">H</text><br/>
@@ -47,7 +45,7 @@
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el2">
 							<div class="spacer">
 								<text class="zNumber">2</text><br/>
 								<text class="symbol">He</text><br/>
@@ -57,7 +55,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el3">
 							<div class="spacer">
 								<text class="zNumber">3</text><br/>
 								<text class="symbol">Li</text><br/>
@@ -65,7 +63,7 @@
 								<div class="atomicMass">6.94</div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el4">
 							<div class="spacer">
 								<text class="zNumber">4</text><br/>
 								<text class="symbol">Be</text><br/>
@@ -74,16 +72,14 @@
 							</div>
 						</td>
 						<td class="null"></td>
+						<td colspan="5" class="null" id="game1">
+							<text>Elemento selecionado:</text><br/>
+							<input type="text" id="answerInput"></input><i onclick="checkAnswer()" class="material-icons" md-18 md-light style="vertical-align: middle;padding: 10px; cursor: pointer">send</i>
+						</td>
 						<td class="null"></td>
+						<td colspan="2" class="null" style="cursor: pointer;" onclick="summary()" id="game2">Ver Resultados</td>
 						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td class="null"></td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el5">
 							<div class="spacer">
 								<text class="zNumber">5</text><br/>
 								<text class="symbol">B</text><br/>
@@ -91,7 +87,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el6">
 							<div class="spacer">
 								<text class="zNumber">6</text><br/>
 								<text class="symbol">C</text><br/>
@@ -99,7 +95,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el7">
 							<div class="spacer">
 								<text class="zNumber">7</text><br/>
 								<text class="symbol">N</text><br/>
@@ -107,7 +103,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el8">
 							<div class="spacer">
 								<text class="zNumber">8</text><br/>
 								<text class="symbol">O</text><br/>
@@ -115,7 +111,7 @@
 								<div class="atomicMass">15.999</div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el9">
 							<div class="spacer">
 								<text class="zNumber">9</text><br/>
 								<text class="symbol">F</text><br/>
@@ -123,7 +119,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el10">
 							<div class="spacer">
 								<text class="zNumber">10</text><br/>
 								<text class="symbol">Ne</text><br/>
@@ -133,7 +129,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el11">
 							<div class="spacer">
 								<text class="zNumber">11</text><br/>
 								<text class="symbol">Na</text><br/>
@@ -141,7 +137,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el12">
 							<div class="spacer">
 								<text class="zNumber">12</text><br/>
 								<text class="symbol">Mg</text><br/>
@@ -159,7 +155,7 @@
 						<td class="null"></td>
 						<td class="null"></td>
 						<td class="null"></td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el13">
 							<div class="spacer">
 								<text class="zNumber">13</text><br/>
 								<text class="symbol">Al</text><br/>
@@ -167,7 +163,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el14">
 							<div class="spacer">
 								<text class="zNumber">14</text><br/>
 								<text class="symbol">Si</text><br/>
@@ -175,7 +171,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el15">
 							<div class="spacer">
 								<text class="zNumber">15</text><br/>
 								<text class="symbol">P</text><br/>
@@ -183,7 +179,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el16">
 							<div class="spacer">
 								<text class="zNumber">16</text><br/>
 								<text class="symbol">S</text><br/>
@@ -191,7 +187,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el17">
 							<div class="spacer">
 								<text class="zNumber">17</text><br/>
 								<text class="symbol">Cl</text><br/>
@@ -199,7 +195,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el18">
 							<div class="spacer">
 								<text class="zNumber">18</text><br/>
 								<text class="symbol">Ar</text><br/>
@@ -209,7 +205,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el19">
 							<div class="spacer">
 								<text class="zNumber">19</text><br/>
 								<text class="symbol">K</text><br/>
@@ -217,7 +213,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el20">
 							<div class="spacer">
 								<text class="zNumber">20</text><br/>
 								<text class="symbol">Ca</text><br/>
@@ -225,7 +221,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el21">
 							<div class="spacer">
 								<text class="zNumber">21</text><br/>
 								<text class="symbol">Sc</text><br/>
@@ -233,7 +229,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el22">
 							<div class="spacer">
 								<text class="zNumber">22</text><br/>
 								<text class="symbol">Ti</text><br/>
@@ -241,7 +237,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el23">
 							<div class="spacer">
 								<text class="zNumber">23</text><br/>
 								<text class="symbol">V</text><br/>
@@ -249,7 +245,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el24">
 							<div class="spacer">
 								<text class="zNumber">24</text><br/>
 								<text class="symbol">Cr</text><br/>
@@ -257,7 +253,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el25">
 							<div class="spacer">
 								<text class="zNumber">25</text><br/>
 								<text class="symbol">Mn</text><br/>
@@ -265,7 +261,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el26">
 							<div class="spacer">
 								<text class="zNumber">26</text><br/>
 								<text class="symbol">Fe</text><br/>
@@ -273,7 +269,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el27">
 							<div class="spacer">
 								<text class="zNumber">27</text><br/>
 								<text class="symbol">Co</text><br/>
@@ -281,7 +277,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el28">
 							<div class="spacer">
 								<text class="zNumber">28</text><br/>
 								<text class="symbol">Ni</text><br/>
@@ -289,7 +285,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el29">
 							<div class="spacer">
 								<text class="zNumber">29</text><br/>
 								<text class="symbol">Cu</text><br/>
@@ -297,7 +293,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el30">
 							<div class="spacer">
 								<text class="zNumber">30</text><br/>
 								<text class="symbol">Zn</text><br/>
@@ -305,7 +301,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el31">
 							<div class="spacer">
 								<text class="zNumber">31</text><br/>
 								<text class="symbol">Ga</text><br/>
@@ -313,7 +309,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el32">
 							<div class="spacer">
 								<text class="zNumber">32</text><br/>
 								<text class="symbol">Ge</text><br/>
@@ -321,7 +317,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el33">
 							<div class="spacer">
 								<text class="zNumber">33</text><br/>
 								<text class="symbol">As</text><br/>
@@ -329,7 +325,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el34">
 							<div class="spacer">
 								<text class="zNumber">34</text><br/>
 								<text class="symbol">Se</text><br/>
@@ -337,7 +333,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el35">
 							<div class="spacer">
 								<text class="zNumber">35</text><br/>
 								<text class="symbol">Br</text><br/>
@@ -345,7 +341,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el36">
 							<div class="spacer">
 								<text class="zNumber">36</text><br/>
 								<text class="symbol">Kr</text><br/>
@@ -355,7 +351,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el37">
 							<div class="spacer">
 								<text class="zNumber">37</text><br/>
 								<text class="symbol">Rb</text><br/>
@@ -363,7 +359,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el38">
 							<div class="spacer">
 								<text class="zNumber">38</text><br/>
 								<text class="symbol">Sr</text><br/>
@@ -371,7 +367,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el39">
 							<div class="spacer">
 								<text class="zNumber">39</text><br/>
 								<text class="symbol">Y</text><br/>
@@ -379,7 +375,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el40">
 							<div class="spacer">
 								<text class="zNumber">40</text><br/>
 								<text class="symbol">Zr</text><br/>
@@ -387,7 +383,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el41">
 							<div class="spacer">
 								<text class="zNumber">41</text><br/>
 								<text class="symbol">Nb</text><br/>
@@ -395,7 +391,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el42">
 							<div class="spacer">
 								<text class="zNumber">42</text><br/>
 								<text class="symbol">Mo</text><br/>
@@ -403,7 +399,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el43">
 							<div class="spacer">
 								<text class="zNumber">43</text><br/>
 								<text class="symbol">Tc</text><br/>
@@ -411,7 +407,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el44">
 							<div class="spacer">
 								<text class="zNumber">44</text><br/>
 								<text class="symbol">Ru</text><br/>
@@ -419,7 +415,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el45">
 							<div class="spacer">
 								<text class="zNumber">45</text><br/>
 								<text class="symbol">Rh</text><br/>
@@ -427,7 +423,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el46">
 							<div class="spacer">
 								<text class="zNumber">46</text><br/>
 								<text class="symbol">Pd</text><br/>
@@ -435,7 +431,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el47">
 							<div class="spacer">
 								<text class="zNumber">47</text><br/>
 								<text class="symbol">Ag</text><br/>
@@ -443,7 +439,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el48">
 							<div class="spacer">
 								<text class="zNumber">48</text><br/>
 								<text class="symbol">Cd</text><br/>
@@ -451,7 +447,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el49">
 							<div class="spacer">
 								<text class="zNumber">49</text><br/>
 								<text class="symbol">In</text><br/>
@@ -459,7 +455,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el50">
 							<div class="spacer">
 								<text class="zNumber">50</text><br/>
 								<text class="symbol">Sn</text><br/>
@@ -467,7 +463,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el51">
 							<div class="spacer">
 								<text class="zNumber">51</text><br/>
 								<text class="symbol">Sb</text><br/>
@@ -475,7 +471,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el52">
 							<div class="spacer">
 								<text class="zNumber">52</text><br/>
 								<text class="symbol">Te</text><br/>
@@ -483,7 +479,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el53">
 							<div class="spacer">
 								<text class="zNumber">53</text><br/>
 								<text class="symbol">I</text><br/>
@@ -491,7 +487,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el54">
 							<div class="spacer">
 								<text class="zNumber">54</text><br/>
 								<text class="symbol">Xe</text><br/>
@@ -501,7 +497,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el55">
 							<div class="spacer">
 								<text class="zNumber">55</text><br/>
 								<text class="symbol">Cs</text><br/>
@@ -509,7 +505,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el56">
 							<div class="spacer">
 								<text class="zNumber">56</text><br/>
 								<text class="symbol">Ba</text><br/>
@@ -517,7 +513,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el57">
 							<div class="spacer">
 								<text class="zNumber">57</text><br/>
 								<text class="symbol">La</text><br/>
@@ -525,7 +521,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el72">
 							<div class="spacer">
 								<text class="zNumber">72</text><br/>
 								<text class="symbol">Hf</text><br/>
@@ -533,7 +529,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el73">
 							<div class="spacer">
 								<text class="zNumber">73</text><br/>
 								<text class="symbol">Ta</text><br/>
@@ -541,7 +537,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el74">
 							<div class="spacer">
 								<text class="zNumber">74</text><br/>
 								<text class="symbol">W</text><br/>
@@ -549,7 +545,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el75">
 							<div class="spacer">
 								<text class="zNumber"></text>75<br/>
 								<text class="symbol"></text>Re<br/>
@@ -557,7 +553,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el76">
 							<div class="spacer">
 								<text class="zNumber">76</text><br/>
 								<text class="symbol">Os</text><br/>
@@ -565,7 +561,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el77">
 							<div class="spacer">
 								<text class="zNumber">77</text><br/>
 								<text class="symbol">Ir</text><br/>
@@ -573,7 +569,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el78">
 							<div class="spacer">
 								<text class="zNumber">78</text><br/>
 								<text class="symbol">Pt</text><br/>
@@ -581,7 +577,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el79">
 							<div class="spacer">
 								<text class="zNumber">79</text><br/>
 								<text class="symbol">Au</text><br/>
@@ -589,7 +585,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el80">
 							<div class="spacer">
 								<text class="zNumber">80</text><br/>
 								<text class="symbol">Hg</text><br/>
@@ -597,7 +593,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el81">
 							<div class="spacer">
 								<text class="zNumber">81</text><br/>
 								<text class="symbol">Tl</text><br/>
@@ -605,7 +601,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el82">
 							<div class="spacer">
 								<text class="zNumber">82</text><br/>
 								<text class="symbol">Pb</text><br/>
@@ -613,7 +609,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el83">
 							<div class="spacer">
 								<text class="zNumber">83</text><br/>
 								<text class="symbol">Bi</text><br/>
@@ -621,7 +617,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el84">
 							<div class="spacer">
 								<text class="zNumber">84</text><br/>
 								<text class="symbol">Po</text><br/>
@@ -629,7 +625,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el85">
 							<div class="spacer">
 								<text class="zNumber">85</text><br/>
 								<text class="symbol">At</text><br/>
@@ -637,7 +633,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el86">
 							<div class="spacer">
 								<text class="zNumber">86</text><br/>
 								<text class="symbol">Rn</text><br/>
@@ -647,7 +643,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el87">
 							<div class="spacer">
 								<text class="zNumber">87</text><br/>
 								<text class="symbol">Fr</text><br/>
@@ -655,7 +651,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el88">
 							<div class="spacer">
 								<text class="zNumber">88</text><br/>
 								<text class="symbol">Ra</text><br/>
@@ -663,7 +659,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el89">
 							<div class="spacer">
 								<text class="zNumber">89</text><br/>
 								<text class="symbol">Ac</text><br/>
@@ -671,7 +667,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el104">
 							<div class="spacer">
 								<text class="zNumber">104</text><br/>
 								<text class="symbol">Rf</text><br/>
@@ -679,7 +675,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el105">
 							<div class="spacer">
 								<text class="zNumber">105</text><br/>
 								<text class="symbol">Db</text><br/>
@@ -687,7 +683,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el106">
 							<div class="spacer">
 								<text class="zNumber">106</text><br/>
 								<text class="symbol">Sg</text><br/>
@@ -695,7 +691,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el107">
 							<div class="spacer">
 								<text class="zNumber">107</text><br/>
 								<text class="symbol">Bh</text><br/>
@@ -703,7 +699,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el108">
 							<div class="spacer">
 								<text class="zNumber">108</text><br/>
 								<text class="symbol">Hs</text><br/>
@@ -711,7 +707,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el109">
 							<div class="spacer">
 								<text class="zNumber">109</text><br/>
 								<text class="symbol">Mt</text><br/>
@@ -719,7 +715,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el110">
 							<div class="spacer">
 								<text class="zNumber">110</text><br/>
 								<text class="symbol">Ds</text><br/>
@@ -727,7 +723,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el111">
 							<div class="spacer">
 								<text class="zNumber">111</text><br/>
 								<text class="symbol">Rg</text><br/>
@@ -735,7 +731,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el112">
 							<div class="spacer">
 								<text class="zNumber">112</text><br/>
 								<text class="symbol">Cn</text><br/>
@@ -743,7 +739,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el113">
 							<div class="spacer">
 								<text class="zNumber">113</text><br/>
 								<text class="symbol">Nh</text><br/>
@@ -751,7 +747,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el114">
 							<div class="spacer">
 								<text class="zNumber">114</text><br/>
 								<text class="symbol">Fl</text><br/>
@@ -759,7 +755,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el115">
 							<div class="spacer">
 								<text class="zNumber">115</text><br/>
 								<text class="symbol">Mc</text><br/>
@@ -767,7 +763,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el116">
 							<div class="spacer">
 								<text class="zNumber">116</text><br/>
 								<text class="symbol">Lv</text><br/>
@@ -775,7 +771,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el117">
 							<div class="spacer">
 								<text class="zNumber">117</text><br/>
 								<text class="symbol">Ts</text><br/>
@@ -783,7 +779,7 @@
 								<div class="atomicMass"></div>
 							</div>
 						</td>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="el118">
 							<div class="spacer">
 								<text class="zNumber">118</text><br/>
 								<text class="symbol">Og</text><br/>
@@ -793,7 +789,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="toggleCell(this)">
+						<td onclick="toggleCell(this)" id="nullCell" class="null" style="visibility: hidden">
 							<div class="spacer">
 								<text class="zNumber"></text><br/>
 								<text class="symbol"></text><br/>
@@ -802,7 +798,245 @@
 							</div>
 						</td>
 					</tr>
+					<tr>
+						<td colspan="3" class="null"></td>
+						<td onclick="toggleCell(this)" id="el58">
+							<div class="spacer">
+								<text class="zNumber">58</text><br/>
+								<text class="symbol">Ce</text><br/>
+								<text class="elementName">Cério</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el59">
+							<div class="spacer">
+								<text class="zNumber">59</text><br/>
+								<text class="symbol">Pr</text><br/>
+								<text class="elementName">Praseodímio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el60">
+							<div class="spacer">
+								<text class="zNumber">60</text><br/>
+								<text class="symbol">Nd</text><br/>
+								<text class="elementName">Neodímio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el61">
+							<div class="spacer">
+								<text class="zNumber">61</text><br/>
+								<text class="symbol">Pm</text><br/>
+								<text class="elementName">Promécio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el62">
+							<div class="spacer">
+								<text class="zNumber">62</text><br/>
+								<text class="symbol">Sm</text><br/>
+								<text class="elementName">Samário</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el63">
+							<div class="spacer">
+								<text class="zNumber">63</text><br/>
+								<text class="symbol">Eu</text><br/>
+								<text class="elementName">Európio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el64">
+							<div class="spacer">
+								<text class="zNumber">64</text><br/>
+								<text class="symbol">Gd</text><br/>
+								<text class="elementName">Gadolínio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el65">
+							<div class="spacer">
+								<text class="zNumber">65</text><br/>
+								<text class="symbol">Tb</text><br/>
+								<text class="elementName">Térbio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el66">
+							<div class="spacer">
+								<text class="zNumber">66</text><br/>
+								<text class="symbol">Dy</text><br/>
+								<text class="elementName">Disprósio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el67">
+							<div class="spacer">
+								<text class="zNumber">67</text><br/>
+								<text class="symbol">Ho</text><br/>
+								<text class="elementName">Hólmio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el68">
+							<div class="spacer">
+								<text class="zNumber">68</text><br/>
+								<text class="symbol">Er</text><br/>
+								<text class="elementName">Érbio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el69">
+							<div class="spacer">
+								<text class="zNumber">69</text><br/>
+								<text class="symbol">Tm</text><br/>
+								<text class="elementName">Túlio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el70">
+							<div class="spacer">
+								<text class="zNumber">70</text><br/>
+								<text class="symbol">Yb</text><br/>
+								<text class="elementName">Itérbio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el71">
+							<div class="spacer">
+								<text class="zNumber">71</text><br/>
+								<text class="symbol">Lu</text><br/>
+								<text class="elementName">Lutécio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td class="null"></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="null"></td>
+						<td onclick="toggleCell(this)" id="el90">
+							<div class="spacer">
+								<text class="zNumber">90</text><br/>
+								<text class="symbol">Th</text><br/>
+								<text class="elementName">Tório</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el91">
+							<div class="spacer">
+								<text class="zNumber">91</text><br/>
+								<text class="symbol">Pa</text><br/>
+								<text class="elementName">Protactínio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el92">
+							<div class="spacer">
+								<text class="zNumber">92</text><br/>
+								<text class="symbol">U</text><br/>
+								<text class="elementName">Urânio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el93">
+							<div class="spacer">
+								<text class="zNumber">93</text><br/>
+								<text class="symbol">Np</text><br/>
+								<text class="elementName">Neptúnio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el94">
+							<div class="spacer">
+								<text class="zNumber">94</text><br/>
+								<text class="symbol">Pu</text><br/>
+								<text class="elementName">Plutônio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el95">
+							<div class="spacer">
+								<text class="zNumber">95</text><br/>
+								<text class="symbol">Am</text><br/>
+								<text class="elementName">Amerício</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el96">
+							<div class="spacer">
+								<text class="zNumber">96</text><br/>
+								<text class="symbol">Cm</text><br/>
+								<text class="elementName">Cúrio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el97">
+							<div class="spacer">
+								<text class="zNumber">97</text><br/>
+								<text class="symbol">Bk</text><br/>
+								<text class="elementName">Berquélio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el98">
+							<div class="spacer">
+								<text class="zNumber">98</text><br/>
+								<text class="symbol">Cf</text><br/>
+								<text class="elementName">Califórnio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el99">
+							<div class="spacer">
+								<text class="zNumber">99</text><br/>
+								<text class="symbol">Es</text><br/>
+								<text class="elementName">Einstênio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el100">
+							<div class="spacer">
+								<text class="zNumber">100</text><br/>
+								<text class="symbol">Fm</text><br/>
+								<text class="elementName">Férmio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el101">
+							<div class="spacer">
+								<text class="zNumber">101</text><br/>
+								<text class="symbol">Md</text><br/>
+								<text class="elementName">Mendelévio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el102">
+							<div class="spacer">
+								<text class="zNumber">102</text><br/>
+								<text class="symbol">No</text><br/>
+								<text class="elementName">Nobélio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td onclick="toggleCell(this)" id="el103">
+							<div class="spacer">
+								<text class="zNumber">103</text><br/>
+								<text class="symbol">Lr</text><br/>
+								<text class="elementName">Laurêncio</text><br/>
+								<div class="atomicMass"></div>
+							</div>
+						</td>
+						<td></td>
+					</tr>
 				</table>
+			</div>
+			<div style="margin-top:50px;">
+				<text class="chapT">Tabela Periódica</text>
+				<p>Nessa página está presente a tabela periódica juntamente a um jogo para ajudar a decorá-la.</p>
+				<button type="button" onclick="startGame()">Iniciar</button>
+				<br/><br/><br/><br/><br/>
 			</div>
 		</div>
 	</body>
