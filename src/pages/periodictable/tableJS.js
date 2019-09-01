@@ -61,9 +61,6 @@ function checkAnswer() {
 			selectedCell = "nullCell";
 			wrong++;
 	}
-
-	document.getElementById("correctA").innerHTML = "Correct: "+correct;
-	document.getElementById("wrongA").innerHTML = "Wrong: "+wrong;
 }
 
 function summary() {
