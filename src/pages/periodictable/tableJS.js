@@ -11,6 +11,7 @@ function toggleCell(element) {
 			selectedCell = element.id;
 		} else if (element.className == "selectedCell") {
 			element.className = "hiddenCell";
+			selectedCell = "nullCell";
 		}
 	}
 }
@@ -49,16 +50,22 @@ function checkAnswer() {
 	var simbols09 = simbols00 + simbols01;
 	var simbols09 = simbols09.split(",");
 
-	var elementNumber = Number(selectedCell.replace('el','')) -1;
-
-	if (simbols09[elementNumber] == answer) {
+	if (selectedCell != "nullCell") {
+		var elementNumber = Number(selectedCell.replace('el','')) -1;
+	} else {
+		var elementNumber = "nullCell";
+	}
+	
+	if (simbols09[elementNumber] == answer && answer != "" && elementNumber != "nullCell") {
 		document.getElementById(selectedCell).className = "visibleCell";
 		selectedCell = "nullCell";
 		correct++;
-	} else {
+	} else if (answer != "" && elementNumber != "nullCell") {
 			document.getElementById(selectedCell).className = "wrongCell";
 			selectedCell = "nullCell";
 			wrong++;
+	} else {
+		alert("Selecione e insira o s\u00EDmbolo do elemento antes de enviar a resposta.");
 	}
 
 	document.getElementById('answerInput').value = "";
