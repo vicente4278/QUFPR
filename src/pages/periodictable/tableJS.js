@@ -53,8 +53,8 @@ function checkAnswer() {
 
 	if (simbols09[elementNumber] == answer) {
 		document.getElementById(selectedCell).className = "visibleCell";
+		document.getElementById('answerInput').value = "";
 		selectedCell = "nullCell";
-		tries = 3;
 		correct++;
 	} else {
 			document.getElementById(selectedCell).className = "wrongCell";
