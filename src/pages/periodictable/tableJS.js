@@ -1,6 +1,5 @@
 var inGame = false;
 var selectedCell = "nullCell";
-var tries = 3;
 var correct = 0;
 var wrong = 0;
 
@@ -33,7 +32,7 @@ function startGame() {
 	var stage = 0;
 
 	function animation() {
-		if (stage == 118) {
+		if (stage == 119) {
 			clearInterval(interval);
 		} else {
 			stage++;
@@ -46,7 +45,7 @@ function checkAnswer() {
 	var answer = document.getElementById('answerInput').value;
 
 	var simbols00 = ["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu"];
-	var simbols01 = ["","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh","Fl","Mc","Lv","Og"];
+	var simbols01 = ["","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh","Fl","Mc","Lv","Ts","Og"];
 	var simbols09 = simbols00 + simbols01;
 	var simbols09 = simbols09.split(",");
 
@@ -58,15 +57,9 @@ function checkAnswer() {
 		tries = 3;
 		correct++;
 	} else {
-		if (tries == 0) {
 			document.getElementById(selectedCell).className = "wrongCell";
-			tries = 3;
 			selectedCell = "nullCell";
 			wrong++;
-		} else {
-			tries--;
-			alert("Wrong. You have "+tries+" tries left.");
-		}
 	}
 
 	document.getElementById("correctA").innerHTML = "Correct: "+correct;
@@ -79,9 +72,7 @@ function summary() {
 	if (reset == true) {
 		correct = 0;
 		wrong = 0;
-		tries = 3;
 		var elementBox = []
-
 		for (var i = 1; i < 119; i++) {
 			elementBox[i] = document.getElementById('el'+i);
 		}
