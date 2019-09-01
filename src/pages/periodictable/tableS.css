@@ -74,19 +74,27 @@ td.tableInfo {
 .visibleCell {
 	opacity: 100;
 	background-color: #2e7d32;
+	cursor: default;
 }
 .wrongCell {
 	opacity: 100;
+	cursor: default;
 }
 .hiddenCell {
 	opacity: 80;
 	background-color: darkgray;
 	color: darkgray;
+	cursor: pointer;
+}
+.hiddenCell:hover {
+	background-color: gray;
+	color: gray;
 }
 .selectedCell {
 	opacity: 80;
 	background-color: orange;
 	color: orange;
+	cursor: pointer;
 }
 button {
 	position: relative;
