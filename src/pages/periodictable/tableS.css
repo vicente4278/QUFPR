@@ -37,7 +37,7 @@ header {
 	line-height: 40px;
 	box-sizing: border-box;
 	-webkit-margin-before: 0.83em;
-	margin-bottom: 100px;
+	margin-bottom: 0px;
 }
 table {
 	border-width: 0px;
@@ -59,6 +59,17 @@ th, td {
 }
 tr {
 	border-spacing: 0px;
+}
+td.tableInfo {
+	padding: 0px;
+	font-size: 18px;
+	text-align: justify;
+	border-spacing: 0px;
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: white;
+	transition-duration: 0.3s;
+	color: #212121;
 }
 .visibleCell {
 	opacity: 100;
