@@ -53,7 +53,6 @@ function checkAnswer() {
 
 	if (simbols09[elementNumber] == answer) {
 		document.getElementById(selectedCell).className = "visibleCell";
-		document.getElementById('answerInput').value = "";
 		selectedCell = "nullCell";
 		correct++;
 	} else {
@@ -61,6 +60,8 @@ function checkAnswer() {
 			selectedCell = "nullCell";
 			wrong++;
 	}
+
+	document.getElementById('answerInput').value = "";
 }
 
 function summary() {
