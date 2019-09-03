@@ -46,12 +46,12 @@ a {
 	cursor: pointer;
 }
 a.normalA {
-	color: #212121;
+	color: #FFF;
 	cursor: pointer;
 	transition-duration: 0.2s;
 }
 a.normalA:visited {
-	color: #212121;
+	color: #FFF;
 }
 
 table {
