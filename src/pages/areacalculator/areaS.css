@@ -69,15 +69,18 @@ a.normalA:visited {
 
 table {
 	border-width: 0px;
+	border-spacing: 0px;
+	border-radius: 0px;
+	border-width: 1px;
+	border-style: hidden;
+	text-align: center;
+	margin-right: 100px;
 }
 
 th, td {
 	padding: 15px;
+	border-color: lightgray;
 	text-align: center;
-	border-spacing: 0px;
-	border-color: gray;
-	border-radius: 2px;
-	border-width: 1px;
 }
 
 .textarea {
