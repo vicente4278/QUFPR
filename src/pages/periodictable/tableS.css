@@ -39,25 +39,21 @@ header {
 	-webkit-margin-before: 0.83em;
 	margin-bottom: 0px;
 }
+
 a {
 	text-decoration: none;
 	color: white;
 	cursor: pointer;
 }
 a.normalA {
-	border-bottom-style: dotted;
-	border-width: 1px;
 	color: #212121;
 	cursor: pointer;
 	transition-duration: 0.2s;
 }
 a.normalA:visited {
-	color: #333;
+	color: #212121;
 }
-a.normalA:hover {
-	border-bottom-style: solid;
-	margin-left: 10px;
-}
+
 table {
 	border-width: 0px;
 	border-spacing: 2px;
