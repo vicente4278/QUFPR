@@ -44,17 +44,17 @@ a {
 	color: white;
 	cursor: pointer;
 }
-a.normal {
+a.normalA {
 	border-bottom-style: dotted;
 	border-width: 1px;
 	color: #212121;
 	cursor: pointer;
 	transition-duration: 0.2s;
 }
-a.normal:visited {
+a.normalA:visited {
 	color: #333;
 }
-a.normal:hover {
+a.normalA:hover {
 	border-bottom-style: solid;
 	margin-left: 10px;
 }
