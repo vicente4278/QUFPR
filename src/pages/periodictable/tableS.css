@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: white;
 }
 header {
 	z-index: 100;
@@ -32,9 +33,10 @@ header {
 	transition-duration: 0.3s;
 }
 
-#body.DarkMode {
+#body.DarkMode, body.DarkMode {
 	color: #fafafa;
 	background-color: #212121;
+	transition-duration: 0.3s;
 }
 .chapT {
 	color: #546e7a;

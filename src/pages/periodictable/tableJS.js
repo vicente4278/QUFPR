@@ -110,6 +110,7 @@ function DarkMode() {
 	var toggle = document.getElementById('id-name--1').checked;
 	if (toggle == true) {
 		document.getElementById('body').className = "DarkMode";
+		document.getElementById('theBody').className = "DarkMode";
 		document.getElementById('version').className = "DarkMode";
 
 		if (inGame ==true) {
@@ -130,6 +131,7 @@ function DarkMode() {
 
 	} else {
 		document.getElementById('body').className = "";
+		document.getElementById('theBody').className = "";
 		document.getElementById('version').className = "";
 
 		if (inGame ==true) {
