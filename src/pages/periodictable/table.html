@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body>
-		<header>
+		<header style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on">
 			<p style="margin-top:-15px;">
 				<i class="material-icons" md-24 md-light style="vertical-align: middle;padding: 10px;">flip_to_front</i>
 				<text style="margin-top: 1px;vertical-align: middle;">Qu&#237;mica Inorg&#226;nica</text>
@@ -24,7 +24,7 @@
 		</header>
 		<div id="body">
 			<div id="input">
-				<table>
+				<table style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on">
 					<tr>
 						<td onclick="toggleCell(this)" id="el1">
 							<div class="spacer">
@@ -82,7 +82,7 @@
 							<input type="name" id="answerInput"></input><i onclick="checkAnswer()" class="material-icons" md-18 md-light style="vertical-align: middle;padding: 10px; cursor: pointer">send</i>
 						</td>
 						<td class="null"></td>
-						<td colspan="2" class="null" style="cursor: pointer; background-color: white; box-shadow: 0px 0px;" onclick="summary()" id="game2"><button style="height:62px; line-height: 16px; width:110px; font-size: 12px;" class="spacer">Ver resultados ou reiniciar</button></td>
+						<td colspan="2" class="null" onclick="summary()" id="game2"><button style="height:62px; line-height: 16px; width:110px; font-size: 12px;" class="spacer">Ver resultados ou reiniciar</button></td>
 						<td class="null"></td>
 						<td onclick="toggleCell(this)" id="el5">
 							<div class="spacer">
@@ -1056,8 +1056,11 @@
 					</tr>
 					<tr>
 						<td class="tableInfo" style="width:50%">
-							<br/>
-							<p style="font-style: italic; font-size: 12px; color: #545454">Massa at&ocirc;mica relativa, IUPAC 2011. Vers&atilde;o do site: 1.1.1</p>
+							<div onclick="DarkMode()">
+								<input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+								<label for="id-name--1" class="switch-label">Modo Noturno</label>
+							</div>
+							<p id="version">Massa at&ocirc;mica relativa, IUPAC 2011. Vers&atilde;o do site: 1.2.0</p>
 							<br/><br/><br/><br/>
 						</td>
 						<td class="tableInfo" style="width:50%" colspan="2"></td>

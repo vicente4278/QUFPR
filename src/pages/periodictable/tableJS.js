@@ -18,8 +18,14 @@ function toggleCell(element) {
 
 function startGame() {
 	document.getElementById('game1').className = "input";
-	document.getElementById('game2').className = "input";
 	document.getElementById('tableImage').style.filter = "blur(5px)";
+
+	var toggle = document.getElementById('id-name--1').checked;
+	if (toggle == true) {
+		document.getElementById('game2').className = "input DarkMode";
+	} else {
+		document.getElementById('game2').className = "input";
+	}
 
 	inGame = true;
 	window.scroll(0,0);
@@ -97,5 +103,49 @@ function summary() {
 
 		document.getElementById('game1').className = "null";
 		document.getElementById('game2').className = "null";
+	}
+}
+
+function DarkMode() {
+	var toggle = document.getElementById('id-name--1').checked;
+	if (toggle == true) {
+		document.getElementById('body').className = "DarkMode";
+		document.getElementById('version').className = "DarkMode";
+
+		if (inGame ==true) {
+			document.getElementById('game2').className = "DarkMode";
+		} else {
+			document.getElementById('game2').className = "null";
+		}
+
+		var tableDark = document.querySelectorAll('.tableInfo');
+		tableDark.forEach(function(thiscell) {
+			thiscell.className = "tableInfoDarkMode";
+		});
+
+		var titleDark = document.querySelectorAll('.chapT');
+		titleDark.forEach(function(thiscell) {
+			thiscell.className = "chapTDarkMode";
+		});
+
+	} else {
+		document.getElementById('body').className = "";
+		document.getElementById('version').className = "";
+
+		if (inGame ==true) {
+			document.getElementById('game2').className = "input";
+		} else {
+			document.getElementById('game2').className = "null";
+		}
+
+		var tableDark = document.querySelectorAll('.tableInfoDarkMode');
+		tableDark.forEach(function(thiscell) {
+			thiscell.className = "tableInfo";
+		});
+
+		var titleDark = document.querySelectorAll('.chapTDarkMode');
+		titleDark.forEach(function(thiscell) {
+			thiscell.className = "chapT";
+		});
 	}
 }
